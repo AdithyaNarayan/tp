@@ -34,6 +34,7 @@ import seedu.address.testutil.PersonBuilder;
 
 public class LogicManagerTest {
     private static final IOException DUMMY_IO_EXCEPTION = new IOException("dummy exception");
+    private static final String REMARK = "";
 
     @TempDir
     public Path temporaryFolder;
@@ -80,7 +81,7 @@ public class LogicManagerTest {
 
         // Execute add command
         String addCommand = AddCommand.COMMAND_WORD + NAME_DESC_AMY + PHONE_DESC_AMY + EMAIL_DESC_AMY
-                + ADDRESS_DESC_AMY;
+                + ADDRESS_DESC_AMY + REMARK;
         Person expectedPerson = new PersonBuilder(AMY).withTags().build();
         ModelManager expectedModel = new ModelManager();
         expectedModel.addPerson(expectedPerson);
